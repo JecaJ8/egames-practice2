@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #212529;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+}
+
+.blue {
+    background-color: #20d8da;
+}
+
+.burger-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column;
+    align-items: flex-end; */
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    align-self: center;
+    padding: 0 30px;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.burger span {
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.mini-nav a {
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+    color: white;
+    font-size: 28px;
+    transition: 0.3s ease;
+}
+
+.mini-nav li:hover a {
+    background-color: #20d8da;
+    color: #000;
+}
+
+.mini-nav {
+    position: absolute;
+    background-color: #212529;
+    top: 64px;
+    right: 0;
+    display: none;
+}
+
+.burger:hover .mini-nav {
+    display: block;
+}
+
+
+/* transformation into X */
+
+.burger:hover span:first-child {
+    opacity: 1;
+    transform: rotate(-45deg) translate(-50%, 0);
+}
+
+.burger:hover span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+.burger:hover span:nth-child(3) {
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+
+
+/* Section 1*/
+
+#section1 {
+    height: 800px;
+    background-image: url('../images/wallpaper1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.overlay img {
+    height: 100%;
+    animation-name: appear;
+    animation-duration: 3s;
+    position: relative;
+}
+
+.text {
+    width: 300px;
+    height: 170px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: #3ea0c7;
+}
+
+.trougao {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+}
+
+.oblacic {
+    display: flex;
+    align-items: center;
+    animation-name: text-appear;
+    animation-duration: 2s;
+}
+
+@keyframes appear {
+    0% {
+        left: -300px
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* forma i mapa */
+
+.contact-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.forma form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.forma input {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 50px;
+    border: 1px solid orange;
+}
+
+.forma textarea {
+    height: 100px;
+    border: 1px solid orange;
+}
+
+h3 {
+    margin-top: 0;
+}

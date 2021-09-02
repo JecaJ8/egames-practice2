@@ -1,0 +1,441 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #212529;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column;
+    align-items: flex-end; */
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    align-self: center;
+    padding: 0 30px;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.burger span {
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.blue {
+    background-color: #20d8da;
+}
+
+.mini-nav a {
+    /*Gotovo*/
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+    color: white;
+    font-size: 28px;
+    transition: 0.3s ease;
+}
+
+.mini-nav li:hover a {
+    /*Gotovo*/
+    background-color: #20d8da;
+    color: #000;
+}
+
+.mini-nav {
+    /*min-width: 250px;*/
+    /*Ili da je en definisemo samo preko paddinga u a*/
+    position: absolute;
+    background-color: #212529;
+    top: 64px;
+    right: 0;
+    display: none;
+}
+
+.burger:hover .mini-nav {
+    display: block;
+}
+
+
+/* pretvaranje u X */
+
+.burger:hover span:first-child {
+    opacity: 1;
+    transform: rotate(-45deg) translate(-50%, 0);
+}
+
+.burger:hover span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+.burger:hover span:nth-child(3) {
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+
+
+/* Stilizacija glavne stranice */
+
+#sekcija1 {
+    background-image: url('../images/wallpaper.jpg');
+    background-size: cover;
+}
+
+h1,
+p {
+    margin-top: 0;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.power {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-left: 2px solid #20d8da;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.power p {
+    line-height: 28px;
+    color: rgb(224, 224, 224);
+}
+
+.bcg a {
+    padding: 20px;
+    background-color: #20d8da;
+    color: #fff;
+}
+
+
+/* Druga sekcija */
+
+.game-wrap>div {
+    width: 100%;
+    /*Ovo menjamo na 33.33%*/
+    padding: 50px 0;
+    /* Nastavljamo sa flexom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-wrap img {
+    width: 264px;
+    height: 75px;
+    margin-bottom: 50px;
+}
+
+.game-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+}
+
+.game-wrap div a {
+    padding: 20px;
+    background-color: #20d8da;
+    color: #fff;
+}
+
+
+/* Treca sekcija */
+
+#sekcija3 {
+    position: relative;
+}
+
+.container-fluid {
+    width: 100%;
+    height: 100%;
+    background-color: #212529;
+}
+
+.a-wrap {
+    border-bottom: 1px solid gray;
+}
+
+.a-wrap a {
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+h2 {
+    margin-bottom: 50px;
+    color: white;
+    font-weight: 400;
+}
+
+.a-wrap a:first-child {
+    background-color: #20d8da;
+}
+
+.best-games {
+    padding: 50px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.game {
+    width: 100%;
+    height: 450px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.game1 {
+    background-image: url('../images/game1.jpg');
+}
+
+.game2 {
+    background-image: url('../images/game2.jpg');
+}
+
+.game3 {
+    background-image: url('../images/game3.jpg');
+}
+
+.game4 {
+    background-image: url('../images/game4.jpg');
+}
+
+.suggestion {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.rating {
+    display: flex;
+}
+
+.headline {
+    text-align: center;
+}
+
+.headline h4 {
+    color: white;
+}
+
+.rating p {
+    margin-right: 30px;
+    color: grey;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.left-overlay,
+.right-overlay {
+    width: 10%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+}
+
+.newcontainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.left-overlay {
+    top: 0;
+    left: 0;
+}
+
+.right-overlay {
+    right: 0;
+    top: 0;
+}
+
+.rating a {
+    color: #20d8da;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+@media (min-width:468px) {
+    .suggestion {
+        width: 50%;
+    }
+    .best-games {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:768px) {
+    #sekcija1 {
+        height: 500px;
+    }
+    .power {
+        width: 60%;
+        padding: 50px;
+    }
+    .overlay {
+        padding: 50px;
+        position: relative;
+    }
+    .bcg a {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    .bcg {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .a-wrap a {
+        padding: 20px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .game-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .game-wrap>div {
+        width: 33.33%;
+        padding: 20px;
+    }
+    .game-wrap img {
+        width: 100%;
+        height: 64px;
+    }
+}
+
+@media (min-width:796px) {
+    .suggestion {
+        width: 33.33%;
+    }
+}
+
+@media (min-width:1024px) {
+    .burger-menu {
+        display: none;
+    }
+    /* .desktop-menu {
+        display: block; 
+    } */
+    .desktop-menu {
+        display: flex;
+    }
+    .big-nav {
+        display: flex;
+    }
+    .big-nav a {
+        padding: 20px 30px;
+        color: white;
+        transition: 0.5s ease;
+    }
+    .big-nav li:hover a {
+        background-color: #20d8da;
+        color: #000;
+    }
+    .desktop-menu img {
+        width: 150px;
+        height: 25px;
+    }
+    /* glavna stranica */
+    .power {
+        width: 70%;
+    }
+    #sekcija1 {
+        height: 700px;
+    }
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /* druga sekcija */
+    #sekcija2 {
+        padding: 100px 0;
+    }
+    .game-wrap>div {
+        padding: 0 50px;
+        border-right: 2px solid rgb(168, 167, 167);
+    }
+    .game-wrap div:last-child {
+        border-right: none;
+    }
+    .suggestion {
+        width: 25%;
+    }
+    .headline h4 {
+        text-align: left;
+    }
+    .left-overlay,
+    .right-overlay {
+        width: 15%;
+    }
+    .newcontainer {
+        width: 70%
+    }
+}
+
+@media (min-width:1388px) {
+    .game-wrap img {
+        height: 70px;
+    }
+}
+
+@media (min-width:1706px) {
+    .game {
+        height: 630px;
+    }
+}
